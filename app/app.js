@@ -81,3 +81,102 @@ if (!window.Intl) {
 if (process.env.NODE_ENV === 'production') {
   require('offline-plugin/runtime').install(); // eslint-disable-line global-require
 }
+
+// Code to create localStorage and store variables
+
+const defaultSettings = {
+  Theme: 'dark',
+  amountPerLoad: 100,
+};
+
+function randomSize(min) {
+  return Math.floor(Math.random() * (900 - min) + min);
+}
+
+const testingImages = {
+  images: [
+    [
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+    ],
+    [
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+    ],
+    [
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+    ],
+    [
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+    ],
+    [
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+    ],
+    [
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+    ],
+    [
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+    ],
+    [
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+      `https://picsum.photos/${randomSize(300)}/${randomSize(400)}`,
+    ],
+  ],
+};
+
+localStorage.setItem('settings', JSON.stringify(defaultSettings));
+sessionStorage.setItem('images', JSON.stringify(testingImages));
