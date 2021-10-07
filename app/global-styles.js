@@ -21,10 +21,10 @@ const GlobalStyle = createGlobalStyle`
     min-width: 100%;
   }
 
-  p,
-  label {
-    font-family: Georgia, Times, 'Times New Roman', serif;
-    line-height: 1.5em;
+  h1,p,h2,span {
+    font-family: Arial;
+    color:#fff;
+    mix-blend-mode:difference;
   }
 `;
 
